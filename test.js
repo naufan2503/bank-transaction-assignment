@@ -10,13 +10,13 @@ const { deposit, withdraw } = require('./main');
 //});
 
 
-test('withdraw more than balance should throw "Insufficient funds"', () => {
-  expect(() => withdraw(50, 60)).toThrow('Insufficient funds');
-});
-
-//test('deposit with non-numeric amount should throw error', () => {
-  //expect(() => deposit(0, "100")).toThrow('Balance and amount must be numbers');
+//test('withdraw more than balance should throw "Insufficient funds"', () => {
+  //expect(() => withdraw(50, 60)).toThrow('Insufficient funds');
 //});
+
+test('deposit with non-numeric amount should throw error', () => {
+  expect(() => deposit(0, "100")).toThrow('Balance and amount must be numbers');
+});
 
 
 //test('INTENTIONAL FAIL: withdraw 30 from 100 should be 80 (WRONG)', () => {
